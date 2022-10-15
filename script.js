@@ -22,6 +22,8 @@ const WIDGET_LIST = [
 
 const cardsContainer = document.querySelector("[data-cards]");
 
+const BASE_URL = window.location.pathname;
+
 const init = () => {
   const cards = [];
 
@@ -31,7 +33,7 @@ const init = () => {
     const cardHtml = `
       <h3 class="card-label">${widget.label}</h3>
       <p class="card-description">${widget.description}</p>
-      <a class="view-link" href="/${widget.name}">View</a>
+      <a class="view-link" href="${BASE_URL}${widget.name}">View</a>
       <div class="tags-container">
         <p class="tag" data-type="${widget.difficulty}">
         ${widget.difficulty}
