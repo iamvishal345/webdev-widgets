@@ -2,7 +2,7 @@ const WIDGET_LIST = [
   {
     name: "card-deck",
     label: "Playing Cards Deck",
-    description: "Playing Cards deck created using css grid",
+    description: "Playing Cards deck created using css grid.",
     difficulty: "medium",
     tags: ["HTML/CSS", "Javascript"],
     date: "15th October 2022",
