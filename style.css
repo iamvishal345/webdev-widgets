@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  font-family: "Roboto";
+}
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #283c86; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #45a247,
+    #283c86
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #45a247,
+    #283c86
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.loader {
+  width: 20vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.widget-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-gap: 1rem;
+  padding: 5rem 2rem;
+}
+
+.widget-card {
+  background: #ffff;
+  box-shadow: rgb(0 0 0 / 20%) 0px 12px 28px 0px,
+    rgb(0 0 0 / 10%) 0px 2px 4px 0px,
+    rgb(255 255 255 / 5%) 0px 0px 0px 1px inset;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-label {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: #737373;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.view-link {
+  display: block;
+  padding: 0.5rem;
+  color: #ffff;
+  background-color: #4f46e5;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+  border-radius: 0.25rem;
+  transition: filter 200ms ease-in-out;
+  width: min(10rem, 100%);
+  margin: auto;
+}
+
+.view-link:hover {
+  filter: brightness(0.9);
+}
+
+.tags-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  overflow: auto;
+}
+
+.tag {
+  text-transform: capitalize;
+  font-size: 0.7rem;
+  line-height: 1rem;
+  background-color: #525252;
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
+  color: #ffff;
+}
+
+.tag[data-type="easy"] {
+  font-size: 0.75rem;
+  background-color: #16a34a;
+}
+
+.tag[data-type="medium"] {
+  font-size: 0.75rem;
+  background-color: #ca8a04;
+}
+
+.tag[data-type="hard"] {
+  font-size: 0.75rem;
+  background-color: #d6284e;
+}
+
+.meta-data {
+  display: flex;
+  font-size: 0.85rem;
+  justify-content: space-between;
+  color: #737373;
+  border-top: 2px dotted;
+  padding-top: 0.5rem;
+}

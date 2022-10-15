@@ -1,0 +1,416 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  --width: 10em;
+  --height: calc(var(--width) * 1.4);
+  width: var(--width);
+  height: var(--height);
+  background-color: white;
+  border: 1px solid #111;
+  border-radius: 0.5em;
+  padding: 0 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  position: relative;
+}
+.card .pip {
+  width: 2em;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  grid-row: span 2;
+}
+.card .corner-number {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: bold;
+}
+.card .corner-number.top {
+  top: 0.25em;
+  left: 0.25em;
+}
+.card .corner-number.bottom {
+  bottom: 0.25em;
+  right: 0.25em;
+  transform: rotate(180deg);
+}
+
+[data-suit=heart] {
+  color: red;
+}
+[data-suit=heart] .pip {
+  background-image: url("./imgs/heart.svg");
+}
+[data-suit=heart] .jack {
+  background-image: url("./imgs/jack-red.svg");
+}
+[data-suit=heart] .king {
+  background-image: url("./imgs/king-red.svg");
+}
+[data-suit=heart] .queen {
+  background-image: url("./imgs/queen-red.svg");
+}
+[data-suit=heart] .corner-number::after {
+  content: url("./imgs/heart.svg");
+  width: 0.75em;
+  height: 0.75em;
+}
+
+[data-suit=diamond] {
+  color: red;
+}
+[data-suit=diamond] .pip {
+  background-image: url("./imgs/diamond.svg");
+}
+[data-suit=diamond] .jack {
+  background-image: url("./imgs/jack-red.svg");
+}
+[data-suit=diamond] .king {
+  background-image: url("./imgs/king-red.svg");
+}
+[data-suit=diamond] .queen {
+  background-image: url("./imgs/queen-red.svg");
+}
+[data-suit=diamond] .corner-number::after {
+  content: url("./imgs/diamond.svg");
+  width: 0.75em;
+  height: 0.75em;
+}
+
+[data-suit=club] .pip {
+  background-image: url("./imgs/club.svg");
+  color: black;
+}
+[data-suit=club] .jack {
+  background-image: url("./imgs/jack-black.svg");
+}
+[data-suit=club] .king {
+  background-image: url("./imgs/king-black.svg");
+}
+[data-suit=club] .queen {
+  background-image: url("./imgs/queen-black.svg");
+}
+[data-suit=club] .corner-number::after {
+  content: url("./imgs/club.svg");
+  width: 0.75em;
+  height: 0.75em;
+}
+
+[data-suit=spade] .pip {
+  background-image: url("./imgs/spade.svg");
+  color: black;
+}
+[data-suit=spade] .jack {
+  background-image: url("./imgs/jack-black.svg");
+}
+[data-suit=spade] .king {
+  background-image: url("./imgs/king-black.svg");
+}
+[data-suit=spade] .queen {
+  background-image: url("./imgs/queen-black.svg");
+}
+[data-suit=spade] .corner-number::after {
+  content: url("./imgs/spade.svg");
+  width: 0.75em;
+  height: 0.75em;
+}
+
+[data-value=A] .pip,
+[data-value=J] .pip,
+[data-value=Q] .pip,
+[data-value=K] .pip {
+  grid-column-start: 2;
+}
+[data-value=A] .pip:first-child,
+[data-value=J] .pip:first-child,
+[data-value=Q] .pip:first-child,
+[data-value=K] .pip:first-child {
+  grid-row-start: 4;
+}
+
+[data-value="2"] .pip {
+  grid-column-start: 2;
+}
+[data-value="2"] .pip:first-child {
+  grid-row-start: 2;
+}
+[data-value="2"] .pip:nth-child(2) {
+  grid-row-start: 6;
+  transform: rotate(180deg);
+}
+
+[data-value="3"] .pip {
+  grid-column-start: 2;
+}
+[data-value="3"] .pip:first-child {
+  grid-row-start: 2;
+}
+[data-value="3"] .pip:nth-child(2) {
+  grid-row-start: 4;
+}
+[data-value="3"] .pip:nth-child(3) {
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="4"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="4"] .pip:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="4"] .pip:nth-child(3) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="4"] .pip:nth-child(4) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="5"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="5"] .pip:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="5"] .pip:nth-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 4;
+  transform: rotate(180deg);
+}
+[data-value="5"] .pip:nth-child(4) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="5"] .pip:nth-child(5) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="6"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="6"] .pip:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="6"] .pip:nth-child(3) {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+[data-value="6"] .pip:nth-child(4) {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+[data-value="6"] .pip:nth-child(5) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="6"] .pip:nth-child(6) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="7"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="7"] .pip:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="7"] .pip:nth-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+[data-value="7"] .pip:nth-child(4) {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+[data-value="7"] .pip:nth-child(5) {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+[data-value="7"] .pip:nth-child(6) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="7"] .pip:nth-child(7) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="8"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="8"] .pip:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="8"] .pip:nth-child(3) {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+[data-value="8"] .pip:nth-child(4) {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+[data-value="8"] .pip:nth-child(5) {
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+[data-value="8"] .pip:nth-child(6) {
+  grid-column-start: 2;
+  transform: rotate(180deg);
+  grid-row-start: 5;
+}
+[data-value="8"] .pip:nth-child(7) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="8"] .pip:nth-child(8) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="9"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="9"] .pip:nth-child(2) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="9"] .pip:nth-child(3) {
+  grid-column-start: 1;
+  grid-row-start: 3;
+  position: relative;
+  top: 0.6em;
+}
+[data-value="9"] .pip:nth-child(4) {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  position: relative;
+  top: 0.6em;
+}
+[data-value="9"] .pip:nth-child(5) {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+[data-value="9"] .pip:nth-child(6) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 5;
+  position: relative;
+  top: -0.6em;
+}
+[data-value="9"] .pip:nth-child(7) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 5;
+  position: relative;
+  top: -0.6em;
+}
+[data-value="9"] .pip:nth-child(8) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="9"] .pip:nth-child(9) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+[data-value="10"] {
+  padding: 0.75rem;
+}
+[data-value="10"] .pip:first-child {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+[data-value="10"] .pip:nth-child(2) {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  margin-top: 1em;
+}
+[data-value="10"] .pip:nth-child(3) {
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+[data-value="10"] .pip:nth-child(4) {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+[data-value="10"] .pip:nth-child(5) {
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+[data-value="10"] .pip:nth-child(6) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 5;
+}
+[data-value="10"] .pip:nth-child(7) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 5;
+}
+[data-value="10"] .pip:nth-child(8) {
+  grid-column-start: 1;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+[data-value="10"] .pip:nth-child(9) {
+  grid-column-start: 2;
+  transform: rotate(180deg);
+  grid-row-start: 5;
+  margin-top: 1em;
+}
+[data-value="10"] .pip:nth-child(10) {
+  grid-column-start: 3;
+  transform: rotate(180deg);
+  grid-row-start: 6;
+}
+
+.ace,
+.king,
+.queen,
+.jack {
+  font-size: 3em;
+}/*# sourceMappingURL=style.css.map */
