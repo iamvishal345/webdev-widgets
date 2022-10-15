@@ -2,7 +2,17 @@ const WIDGET_LIST = [
   {
     name: "card-deck",
     label: "Playing Cards Deck",
-    description: "Playing Cards deck created using css grid.",
+    description: "Playing Cards deck created using css grid and svg.",
+    difficulty: "medium",
+    tags: ["HTML/CSS", "Javascript"],
+    date: "15th October 2022",
+    author: "Vishal Sharma",
+  },
+  {
+    name: "countdown",
+    label: "Countdown Widget",
+    description:
+      "Flip animation countdown for Hours, Minutes and Seconds using CSS and JS.",
     difficulty: "medium",
     tags: ["HTML/CSS", "Javascript"],
     date: "15th October 2022",

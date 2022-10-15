@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  --animation-time: 500ms;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #f2f1ed;
+  color: #de4848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card {
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 0.15em;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px 0px #686363;
+  position: relative;
+  font-size: 2em;
+}
+.flip-card .top-flip {
+  position: absolute;
+  content: attr(data-current-number);
+  width: 100%;
+  -webkit-animation: flip-top var(--animation-time) ease-in;
+          animation: flip-top var(--animation-time) ease-in;
+  transform-origin: bottom;
+}
+.flip-card .bottom-flip {
+  position: absolute;
+  content: attr(data-next-number);
+  bottom: 0;
+  width: 100%;
+  -webkit-animation: flip-bottom var(--animation-time) ease-out var(--animation-time);
+          animation: flip-bottom var(--animation-time) ease-out var(--animation-time);
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+.flip-card .top,
+.flip-card .bottom,
+.flip-card .bottom-flip,
+.flip-card .top-flip {
+  padding: 0.5em;
+  line-height: 1;
+  font-weight: 500;
+  height: 0.75em;
+  overflow: hidden;
+}
+.flip-card .top,
+.flip-card .top-flip {
+  background-color: #f7f7f7;
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
+}
+.flip-card .bottom,
+.flip-card .bottom-flip {
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+}
+
+@-webkit-keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+@-webkit-keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+.container .container-segment {
+  position: relative;
+}
+.container .container-segment::before {
+  position: absolute;
+  content: attr(data-time);
+  font-size: 1.25em;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=style.css.map */
