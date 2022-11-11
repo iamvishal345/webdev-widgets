@@ -1,6 +1,7 @@
 * {
   margin: 0;
   font-family: "Roboto";
+  box-sizing: border-box;
 }
 body {
   min-height: 100vh;
@@ -34,7 +35,7 @@ body {
 
 .widget-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
   padding: 2rem;
 }
@@ -82,8 +83,19 @@ body {
 .tags-container {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem 0;
+  margin: 0.8rem 0;
   overflow: auto;
+  padding: 0.2rem 0;
+}
+
+.tags-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.tags-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #45a247, #283c86);
+  border-radius: 10px;
 }
 
 .tag {

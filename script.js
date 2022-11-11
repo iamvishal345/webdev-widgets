@@ -18,6 +18,24 @@ const WIDGET_LIST = [
     date: "15th October 2022",
     author: "Vishal Sharma",
   },
+  {
+    name: "custom-checkbox",
+    label: "Custom Checkbox",
+    description: "Custom Toggle Switch checkbox with sliding animation.",
+    difficulty: "easy",
+    tags: ["HTML/CSS", "Javascript"],
+    date: "3rd November 2022",
+    author: "Vishal Sharma",
+  },
+  {
+    name: "multistep-form",
+    label: "Multi Step Form",
+    description: "Multi Step form with sliding animations and validations",
+    difficulty: "easy",
+    tags: ["HTML", "CSS Animations", "Javascript"],
+    date: "3rd November 2022",
+    author: "Vishal Sharma",
+  },
 ];
 
 const cardsContainer = document.querySelector("[data-cards]");
@@ -48,10 +66,9 @@ const init = () => {
     card.innerHTML = cardHtml;
     cards.push(card);
   });
-  setTimeout(() => {
-    cardsContainer.innerHTML = null;
-    cardsContainer.append(...cards);
-  }, 1000);
+
+  cardsContainer.innerHTML = null;
+  cardsContainer.append(...cards);
 };
 
 init();
