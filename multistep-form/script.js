@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     formSteps[0].classList.remove("prevent-animation");
   }, 800);
 });
-console.log("HERE");
 const getCurrentStepInputs = () => {
   return formSteps[currentStep].querySelectorAll("input");
 };
@@ -21,7 +20,6 @@ if (currentStep === -1) {
 }
 
 form.addEventListener("click", (e) => {
-  console.log(e.target.dataset);
   const { next, prev } = e.target.dataset;
   if (next === "") {
     if (validateCurrentStep()) {
@@ -42,7 +40,6 @@ const addAndRemoveFade = (el) => {
 };
 
 const handleNextButtonClick = () => {
-  console.log("HERE");
   formSteps[currentStep].classList.remove("active-reverse");
   formSteps[currentStep].classList.remove("active");
   addAndRemoveFade(formSteps[currentStep]);

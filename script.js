@@ -36,6 +36,16 @@ const WIDGET_LIST = [
     date: "3rd November 2022",
     author: "Vishal Sharma",
   },
+  {
+    name: "review-widget",
+    label: "Review and Rating Widget",
+    description:
+      "A Rating Widget with average rating and progress bar of all the ratings.",
+    difficulty: "medium",
+    tags: ["HTML", "CSS Animations", "Javascript"],
+    date: "2nd January 2023",
+    author: "Vishal Sharma",
+  },
 ];
 
 const cardsContainer = document.querySelector("[data-cards]");
