@@ -56,6 +56,16 @@ const WIDGET_LIST = [
     date: "22 February 2023",
     author: "Vishal Sharma",
   },
+  {
+    name: "shipment-timeline",
+    label: "Shipment Timeline Card",
+    description:
+      "A card to show goods shipment timeline using vertical status design",
+    difficulty: "easy",
+    tags: ["HTML", "CSS"],
+    date: "22 February 2023",
+    author: "Vishal Sharma",
+  },
 ];
 
 const cardsContainer = document.querySelector("[data-cards]");

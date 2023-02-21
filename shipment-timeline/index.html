@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="shipment-card">
+        <h3 class="header">Package Details</h3>
+        <div class="details">
+          <dl>
+            <div class="data-item">
+              <dt>
+                <img src="./img/track.svg" height="12" width="12" />
+                TRACKING ID
+              </dt>
+              <dd>1029384756477</dd>
+            </div>
+            <div class="data-item">
+              <dt>
+                <img src="./img/weight.svg" height="12" width="12" />
+                WEIGHT
+              </dt>
+              <dd>5.4 KG</dd>
+            </div>
+            <div class="data-item">
+              <dt>
+                <img src="./img/scale.svg" height="12" width="12" />
+                DIMENSIONS
+              </dt>
+              <dd>37 x 26 x 23 cm</dd>
+            </div>
+          </dl>
+        </div>
+        <ul class="timeline">
+          <li class="step active">
+            <p class="description">The shipment has arrived at the terminal.</p>
+            <p class="meta">March 23 at 08.20 - 5020 BERGEN</p>
+          </li>
+          <li class="step">
+            <p class="description">The shipment is in transit.</p>
+            <p class="meta">March 22 at 07.20 - 0024 OSLO</p>
+          </li>
+          <li class="step">
+            <p class="description">The broadcast is sorted and forwarded.</p>
+            <p class="meta">March 22 at 00.38 - 0024 OSLO</p>
+          </li>
+          <li class="step">
+            <p class="description">
+              Consignment has been dispatched to the terminal and forwarded.
+            </p>
+            <p class="meta">March 22 at 00.33 - 0024 OSLO</p>
+          </li>
+          <li class="step">
+            <p class="description">
+              We have received information about the shipment, which is
+              currently with the sender or is on its way to Bring's terminal.
+              The tracking is updated when the shipment has arrived at the
+              terminal in the receiving country.
+            </p>
+            <p class="meta">March 21 at 07.35</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

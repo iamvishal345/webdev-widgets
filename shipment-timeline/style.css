@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.card-container {
+  height: 100%;
+  background-color: #e3e5f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container .shipment-card {
+  padding: 3rem;
+  border-radius: 2rem;
+  width: min(550px, 100%);
+  background-color: #ffffff;
+  box-shadow: 0 34px 64px 0 rgba(96, 103, 159, 0.2);
+}
+.card-container .shipment-card .header {
+  color: #10153e;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card-container .shipment-card .details {
+  margin-top: 2rem;
+  background-color: #f7f7fa;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.card-container .shipment-card .details dl {
+  display: flex;
+  justify-content: space-between;
+}
+.card-container .shipment-card .details dl dt {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #60679f;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.card-container .shipment-card .details dl dd {
+  font-size: 0.8rem;
+  color: #10153e;
+}
+.card-container .shipment-card .timeline {
+  margin: 0;
+  margin-top: 32px;
+  list-style: none;
+}
+.card-container .shipment-card .timeline .step {
+  border-left: 2px solid #60679f;
+  padding-left: 22px;
+  position: relative;
+}
+.card-container .shipment-card .timeline .step .description {
+  color: #10153e;
+  margin-bottom: 8px;
+  line-height: 24px;
+}
+.card-container .shipment-card .timeline .step:first-child::before {
+  top: 0;
+}
+.card-container .shipment-card .timeline .step:first-child .description {
+  position: relative;
+  top: -4px;
+  margin-bottom: 4px;
+}
+.card-container .shipment-card .timeline .step .meta {
+  color: #60679f;
+  font-size: 12px;
+  padding-bottom: 24px;
+}
+.card-container .shipment-card .timeline .step::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  border: 1px solid #60679f;
+  border-radius: 50%;
+  position: absolute;
+  left: -12px;
+  background: white;
+  top: 4px;
+}
+.card-container .shipment-card .timeline .step.active::before {
+  border-width: 4px;
+  height: 14px;
+  width: 14px;
+}/*# sourceMappingURL=style.css.map */
