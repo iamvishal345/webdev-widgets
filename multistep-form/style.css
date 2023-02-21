@@ -24,16 +24,13 @@ form .card {
   margin: 0px -1rem;
 }
 form .card.active {
-  -webkit-animation: slide 500ms 100ms ease-in-out forwards;
-          animation: slide 500ms 100ms ease-in-out forwards;
+  animation: slide 500ms 100ms ease-in-out forwards;
 }
 form .card.fade {
-  -webkit-animation: fade 200ms ease-in-out forwards;
-          animation: fade 200ms ease-in-out forwards;
+  animation: fade 200ms ease-in-out forwards;
 }
 form .card.active-reverse {
-  -webkit-animation: slide-reverse 500ms ease-in-out forwards;
-          animation: slide-reverse 500ms ease-in-out forwards;
+  animation: slide-reverse 500ms ease-in-out forwards;
 }
 form .card .header,
 form .card .sub-header {
@@ -63,30 +60,9 @@ form .card .form-group textarea {
   padding: 0.25rem;
 }
 
-@-webkit-keyframes slide {
-  0% {
-    transform: translateX(500%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
 @keyframes slide {
   0% {
     transform: translateX(500%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slide-reverse {
-  0% {
-    transform: translateX(-500%);
     opacity: 0;
   }
   100% {
@@ -104,16 +80,6 @@ form .card .form-group textarea {
     opacity: 1;
   }
 }
-@-webkit-keyframes fade {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
 @keyframes fade {
   0% {
     transform: scale(1);
@@ -125,6 +91,5 @@ form .card .form-group textarea {
   }
 }
 .prevent-animation {
-  -webkit-animation-duration: 0ms !important;
-          animation-duration: 0ms !important;
+  animation-duration: 0ms !important;
 }/*# sourceMappingURL=style.css.map */

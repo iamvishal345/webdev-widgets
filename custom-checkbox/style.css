@@ -21,7 +21,6 @@ input[type=checkbox].toggle + label {
   align-items: center;
   gap: 0.25em;
   position: relative;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }

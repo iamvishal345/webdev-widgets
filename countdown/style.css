@@ -33,8 +33,7 @@ body {
   position: absolute;
   content: attr(data-current-number);
   width: 100%;
-  -webkit-animation: flip-top var(--animation-time) ease-in;
-          animation: flip-top var(--animation-time) ease-in;
+  animation: flip-top var(--animation-time) ease-in;
   transform-origin: bottom;
 }
 .flip-card .bottom-flip {
@@ -42,8 +41,7 @@ body {
   content: attr(data-next-number);
   bottom: 0;
   width: 100%;
-  -webkit-animation: flip-bottom var(--animation-time) ease-out var(--animation-time);
-          animation: flip-bottom var(--animation-time) ease-out var(--animation-time);
+  animation: flip-bottom var(--animation-time) ease-out var(--animation-time);
   transform-origin: top;
   transform: rotateX(90deg);
 }
@@ -69,20 +67,9 @@ body {
   align-items: flex-end;
 }
 
-@-webkit-keyframes flip-top {
-  100% {
-    transform: rotateX(90deg);
-  }
-}
-
 @keyframes flip-top {
   100% {
     transform: rotateX(90deg);
-  }
-}
-@-webkit-keyframes flip-bottom {
-  100% {
-    transform: rotateX(0deg);
   }
 }
 @keyframes flip-bottom {
