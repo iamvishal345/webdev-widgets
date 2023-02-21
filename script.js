@@ -66,6 +66,15 @@ const WIDGET_LIST = [
     date: "22 February 2023",
     author: "Vishal Sharma",
   },
+  {
+    name: "vertical-timeline",
+    label: "Responsive full page vertical timeline",
+    description: "A Responsive social media reactions timeline of your posts",
+    difficulty: "medium",
+    tags: ["HTML", "CSS"],
+    date: "22 February 2023",
+    author: "Vishal Sharma",
+  },
 ];
 
 const cardsContainer = document.querySelector("[data-cards]");

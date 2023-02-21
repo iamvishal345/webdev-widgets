@@ -1,0 +1,108 @@
+:root {
+  --subdued-color: #777;
+  --text-color: #555;
+  --avatar-size: 50px;
+  --grid-gap: 1rem;
+  --group-header-spacing: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  color: var(--text-color);
+}
+
+.notification-section {
+  margin: 2rem 1rem 3rem;
+}
+.notification-section .group-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--subdued-color);
+  padding: 0.25rem;
+  margin-bottom: var(--group-header-spacing);
+}
+.notification-section .group-header .group-date {
+  color: var(--subdued-color);
+}
+.notification-section .notification-grid {
+  width: min(750px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: var(--grid-gap);
+}
+.notification-section .notification-grid .avatar {
+  position: relative;
+}
+.notification-section .notification-grid .avatar::after {
+  content: "";
+  position: absolute;
+  background-color: var(--subdued-color);
+  width: 0.75px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: var(--avatar-size);
+  bottom: calc(var(--grid-gap) * -1);
+}
+.notification-section .notification-grid .avatar:first-child::before {
+  content: "";
+  position: absolute;
+  background-color: var(--subdued-color);
+  width: 0.75px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: calc(-1 * var(--group-header-spacing));
+  bottom: 100%;
+}
+.notification-section .notification-grid .avatar:nth-last-child(2)::after {
+  display: none;
+}
+.notification-section .notification-grid .avatar img {
+  width: 100%;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  display: block;
+}
+.notification-section .notification-grid .notification-card {
+  background-color: #fff;
+  border: 1px solid var(--subdued-color);
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+}
+.notification-section .notification-grid .notification-card .notification-header {
+  display: flex;
+  gap: 0.5rem;
+}
+.notification-section .notification-grid .notification-card .notification-header .icon {
+  fill: var(--subdued-color);
+  width: 20px;
+  height: 20px;
+}
+.notification-section .notification-grid .notification-card .notification-header .notification-title {
+  flex-grow: 1;
+  font-size: 1.15rem;
+}
+.notification-section .notification-grid .notification-card .notification-header .notification-time {
+  color: var(--subdued-color);
+}
+.notification-section .notification-grid .notification-card .notification-content {
+  background-color: #f4f4f4;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}/*# sourceMappingURL=index.css.map */
