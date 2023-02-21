@@ -30,7 +30,7 @@ const WIDGET_LIST = [
   {
     name: "multistep-form",
     label: "Multi Step Form",
-    description: "Multi Step form with sliding animations and validations",
+    description: "Multi Step form with sliding animations and validations.",
     difficulty: "easy",
     tags: ["HTML", "CSS Animations", "Javascript"],
     date: "3rd November 2022",
@@ -60,7 +60,7 @@ const WIDGET_LIST = [
     name: "shipment-timeline",
     label: "Shipment Timeline Card",
     description:
-      "A card to show goods shipment timeline using vertical status design",
+      "A card to show goods shipment timeline using vertical status design.",
     difficulty: "easy",
     tags: ["HTML", "CSS"],
     date: "22 February 2023",
@@ -69,9 +69,38 @@ const WIDGET_LIST = [
   {
     name: "vertical-timeline",
     label: "Responsive full page vertical timeline",
-    description: "A Responsive social media reactions timeline of your posts",
+    description: "A Responsive social media reactions timeline of your posts.",
     difficulty: "medium",
     tags: ["HTML", "CSS"],
+    date: "22 February 2023",
+    author: "Vishal Sharma",
+  },
+  {
+    name: "split-text-effect",
+    label: "Split text effect on hover",
+    description:
+      "Split text animation effect on hover using css animations without javascript.",
+    difficulty: "medium",
+    tags: ["HTML", "CSS Animations"],
+    date: "22 February 2023",
+    author: "Vishal Sharma",
+  },
+  {
+    name: "submit-button-animation",
+    label: "Button Animation Effect",
+    description:
+      "Progress and Submit check mark animation using css and javascript.",
+    difficulty: "medium",
+    tags: ["HTML", "CSS Animations"],
+    date: "22 February 2023",
+    author: "Vishal Sharma",
+  },
+  {
+    name: "youtube-sidebar",
+    label: "Youtube Sidebar",
+    description: "Youtube Sidebar clone with expand and collapse animation.",
+    difficulty: "medium",
+    tags: ["HTML", "CSS Animations"],
     date: "22 February 2023",
     author: "Vishal Sharma",
   },
