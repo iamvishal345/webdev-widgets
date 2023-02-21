@@ -1,0 +1,57 @@
+.toast-container {
+  position: fixed;
+  margin: 10px;
+  width: 300px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  &[data-position^="top-"] {
+    top: 0;
+  }
+  &[data-position^="bottom-"] {
+    bottom: 0;
+  }
+  &[data-position$="-right"] {
+    right: 0;
+  }
+  &[data-position$="-left"] {
+    left: 0;
+  }
+  &[data-position$="-center"] {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.toast {
+  box-sizing: border-box;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 0.25rem;
+  border: 1px solid #333;
+  pointer-events: none;
+  position: relative;
+  &.can-close {
+    &::before {
+      content: "\00d7";
+      font-size: 1.5em;
+      position: absolute;
+      right: 2px;
+      top: -5px;
+      cursor: pointer;
+      pointer-events: all;
+    }
+  }
+}
+
+// actions
+
+.actions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 16px);
+  gap: 1rem;
+}

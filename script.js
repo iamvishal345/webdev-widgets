@@ -46,6 +46,16 @@ const WIDGET_LIST = [
     date: "2nd January 2023",
     author: "Vishal Sharma",
   },
+  {
+    name: "toastify",
+    label: "Toast Library",
+    description:
+      "A simple Implementation of toast library using JavaScript classes.",
+    difficulty: "medium",
+    tags: ["HTML", "Javascript", "ES6"],
+    date: "22 February 2023",
+    author: "Vishal Sharma",
+  },
 ];
 
 const cardsContainer = document.querySelector("[data-cards]");
