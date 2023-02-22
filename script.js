@@ -104,6 +104,16 @@ const WIDGET_LIST = [
     date: "22 February 2023",
     author: "Vishal Sharma",
   },
+  {
+    name: "flipkart-clone",
+    label: "Flipkart Home Page Clone",
+    description: "Flipkart Home page clone build using React and Pure CSS",
+    difficulty: "hard",
+    tags: ["React", "Javascript", "CSS"],
+    date: "23 February 2023",
+    author: "Vishal Sharma",
+    external: "https://iamvishal345.github.io/flipkart-home-page/",
+  },
 ];
 
 const cardsContainer = document.querySelector("[data-cards]");
@@ -119,7 +129,9 @@ const init = () => {
     const cardHtml = `
       <h3 class="card-label">${widget.label}</h3>
       <p class="card-description">${widget.description}</p>
-      <a class="view-link" href="${BASE_URL}${widget.name}">View</a>
+      <a class="view-link" href="${
+        widget.external || BASE_URL + widget.name
+      }">View</a>
       <div class="tags-container">
         <p class="tag" data-type="${widget.difficulty}">
         ${widget.difficulty}
